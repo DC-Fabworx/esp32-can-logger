@@ -25,7 +25,7 @@ _A Wi-Fi-enabled CAN logging system for diesel tuning & telemetry, built by Lock
 
 ![Grafana Dashboard Sample](https://raw.githubusercontent.com/LockedInGarage/esp32-can-logger/main/assets/dashboard_preview.png)
 
-> _Live telemetry from a 4JJ3-powered Toyota LandCruiser, shown in Grafana_
+> _Live telemetry from OBD, shown in Grafana_
 
 ---
 
