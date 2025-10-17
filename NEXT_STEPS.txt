@@ -1,0 +1,7 @@
+
+1) Update configs/ccs.yml if CCS expects a different TCP port or COM name. Defaults: mode=tcp, realtime=true.
+2) Start capture normally:
+   PowerShell> .\scripts\run_capture.ps1
+3) Start the CCS bridge:
+   PowerShell> .\scripts\run_ccs_bridge.ps1
+4) For serial mode: run .\scripts\install_virtual_com.ps1 and configure com0com, then set serial.com_out in ccs.yml and switch mode to 'serial'.

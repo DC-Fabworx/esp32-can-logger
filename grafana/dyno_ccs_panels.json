@@ -1,0 +1,22 @@
+{
+  "title": "Dyno + CCS Link",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "CCS Link Status",
+      "id": 10
+    },
+    {
+      "type": "stat",
+      "title": "Last Frame Age",
+      "id": 11
+    },
+    {
+      "type": "timeseries",
+      "title": "Frames/sec (placeholder)",
+      "id": 12
+    }
+  ],
+  "schemaVersion": 38,
+  "version": 1
+}

@@ -1,0 +1,20 @@
+
+# CCS integration configuration
+mode: tcp           # options: tcp | file | rest | serial
+realtime: true      # true for no buffering
+tcp:
+  host: 127.0.0.1   # CCS listener IP
+  port: 40100       # CCS listener port
+file:
+  csv_path: logs/ccs_feed/live.csv
+  json_path: logs/ccs_feed/live.json
+  flush_interval_ms: 100   # small flush for near-realtime
+rest:
+  url: http://127.0.0.1:8081/ingest
+  batch_size: 1            # 1 for realtime
+serial:
+  com_out: COM15           # virtual COM created by com0com
+  baud: 115200
+# Input source for the adapter (what we broadcast)
+source:
+  websocket_url: ws://127.0.0.1:8765   # from udp_bridge.py
