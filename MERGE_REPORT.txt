@@ -1,0 +1,6 @@
+MERGE REPORT
+Generated: 2025-10-17T01:43:31.576408Z
+
+- New files merged for CI, releases, serial support, and EVTX parsing.
+- Legacy placeholder: legacy_existing_repo_content/
+- See README_PRO_SETUP.md for usage.
