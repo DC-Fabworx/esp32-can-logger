@@ -29,15 +29,22 @@ For a reviewed Techstream-to-CAN correlation, preserve:
 
 - capture file SHA-256;
 - capture start/end time and timezone;
+- per-sample timestamp semantics for both CAN and Techstream sources, including clock source, unit and reference epoch/origin where available;
+- when recordings use separate hosts or clocks, synchronization method and the measured/derived clock offset, drift or other explicit alignment evidence used by the correlation;
 - logger firmware/build identity;
 - CAN interface/bus/bitrate configuration;
-- arbitration ID, direction and payload bytes;
+- arbitration ID, frame format/IDE state (11-bit standard versus 29-bit extended), direction and payload bytes;
+- RTR state and CAN FD/BRS/ESI flags where the capture format supports them;
 - ISO-TP/UDS reconstruction details where applicable;
 - exact Techstream source/session identity;
 - `info__*.json` / `info.json` `memo` and `functionId` label where present;
 - exact OEM/GTS signal name/unit/source context;
 - correlation method and confidence;
 - source repository/commit or runtime-authority identity.
+
+A timestamp match is not valid merely because both recordings have wall-clock times. When separate clocks are involved, preserve enough evidence to reproduce the alignment and distinguish clock offset/drift from signal lag.
+
+Likewise, a numeric arbitration ID is incomplete without frame-format context. Preserve IDE/frame-format and other available frame-state flags so standard, extended, remote and FD frames cannot be conflated.
 
 ## Techstream scaling rule
 
