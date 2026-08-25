@@ -1,5 +1,5 @@
-
 pyserial
-
+PyYAML
+websockets
 fastapi
 uvicorn
